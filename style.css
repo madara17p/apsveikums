@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(jungle.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bumbada {
+    width: 300px;
+    animation-name: movingBumbada;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+@keyframes movingBumbada {
+    0% {
+        left: -60vw;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        width: 1250;
+    }
+    100% {
+        transform: rotate(-10deg);
+        left: 60vw;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
